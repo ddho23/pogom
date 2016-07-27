@@ -1,7 +1,7 @@
 # PoGoMap
 The no-bloat version of [PokemonGo-Map](https://github.com/AHAAAAAAA/PokemonGo-Map) (their rewrite is actually an early-stage fork of this project).
 
-Heavily using [pgoapi](https://github.com/tejado/pgoapi). 
+Heavily using [pgoapi](https://github.com/tejado/pgoapi).
 
 **Due to throttling of the niantic servers the `-c` option does not work at the moment. We have released a hotfix so that you can use the map without the -c option. However, it will not be as fast as before. We are currently evaluating options to achieve higher scan speeds again. See the comments of issue #58.**
 
@@ -20,8 +20,10 @@ Edit `pogom/__init__.py` and enter your GMaps Key.
 pip install -r requirements.txt
 python runserver.py -u USERNAME -p PASSWORD -l LOCATION -r SEARCHRADIUS -c
 ```
-The `-c` flag switches to pycurl (python wrapper around the libcurl library) as downloader. This is so performant that the parsing and DB stuff becomes the bottleneck. 
+The `-c` flag switches to pycurl (python wrapper around the libcurl library) as downloader. This is so performant that the parsing and DB stuff becomes the bottleneck.
 
+## Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ##Features
 - [x] Extremely fast (scans a 5km search radius in 1m30s with the -c flag)

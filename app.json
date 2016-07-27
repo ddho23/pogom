@@ -1,0 +1,31 @@
+{
+  "name": "PogoMap",
+  "description": "The fastest Pokémon Go Map available",
+  "repository": "https://github.com/favll/pogom",
+  "keywords": ["pokemon", "pokemon go"],
+  "env": {
+    "AUTH_SERVICE": {
+      "description": "Authentication service to use. [ptc|google]"
+    },
+    "USERNAME": {
+      "description": "Your username to login to the specified authentication service."
+    },
+    "PASSWORD": {
+      "description": "Your password to login to the specified authentication service."
+    },
+    "LOCATION": {
+      "description": "Location on which the map should be centered. This can be an address, co-ordinates or any string that Google Maps accepts."
+    },
+    "GMAPS_KEY": {
+      "description": "A Google Maps API key for this application."
+    },
+    "RADIUS": {
+      "description": "Search radius in meters.",
+      "value": "2000"
+    },
+    "EXTRA_ARGS": {
+      "description": "Any extra arguments that you want to pass to runserver.py.",
+      "required": false
+    }
+  }
+}
