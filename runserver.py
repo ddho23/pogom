@@ -56,4 +56,8 @@ if __name__ == '__main__':
 
     app = Pogom(__name__)
     config['ROOT_PATH'] = app.root_path
+
+    if args.googlekey:
+        config['GOOGLEMAPS_KEY']=args.googlekey
+
     app.run(threaded=True, debug=args.debug, host=args.host, port=args.port)
