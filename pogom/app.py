@@ -23,6 +23,7 @@ class Pogom(Flask):
 
         self.route('/', methods=['GET'])(self.fullmap)
         self.route('/map-data', methods=['GET'])(self.map_data)
+        self.route('/raw_data', methods=['GET'])(self.map_data)
         self.route('/cover', methods=['GET'])(self.cover)
         self.route('/set-location', methods=['POST'])(self.set_location)
         self.route('/stats', methods=['GET'])(self.stats)
