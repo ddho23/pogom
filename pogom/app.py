@@ -23,10 +23,15 @@ class Pogom(Flask):
 
         self.route('/', methods=['GET'])(self.fullmap)
         self.route('/map-data', methods=['GET'])(self.map_data)
-        self.route('/raw_data', methods=['GET'])(self.map_data)
+
         self.route('/cover', methods=['GET'])(self.cover)
         self.route('/set-location', methods=['POST'])(self.set_location)
+
         self.route('/stats', methods=['GET'])(self.stats)
+
+        # Route aliases to support iPokeGo client
+        self.route('/raw_data', methods=['GET'])(self.map_data)
+        self.route('/next_loc', methods=['POST'])(self.set_location)
 
     def fullmap(self):
         return render_template('map.html',
